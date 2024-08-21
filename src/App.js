@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import GridView from './components/gridview';
 import './App.css';
 
+// Importa las imágenes
+import defaultImage from './Assets/add-file.png';
+
 function App() {
   const [viewCount, setViewCount] = useState(4);
   const [images, setImages] = useState([
-    'path/to/dicom1.png',
-    'path/to/dicom2.png',
-    'path/to/dicom3.png',
-    'path/to/dicom4.png' 
+    defaultImage,
+    defaultImage,
+    defaultImage,
+    defaultImage 
   ]);
 
   const handleViewChange = (count) => {

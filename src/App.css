@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center; 
   height: 100vh; 
-  background-color:black;
+  background-color:#E2BBE9;
   color: #fff;
   padding: 10px;
 }
@@ -15,7 +15,7 @@
 }
 
 .App button {
-  background-color: blueviolet;
+  background-color: #7776bd;
   color: #fff;
   border: 1px solid black;
   border-radius: 10%;
