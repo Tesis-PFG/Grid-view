@@ -13,7 +13,6 @@ function createWindow() {
   });
 
   mainWindow.loadURL('http://localhost:3000');
-  // mainWindow.webContents.openDevTools(); // Abre las herramientas de desarrollo de Electron
 }
 
 app.whenReady().then(() => {

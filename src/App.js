@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import GridView from './components/gridview';
+import './App.css';
 
 function App() {
-  const [viewCount, setViewCount] = useState(4); //El valor que esté dentro del useState es la cantidad 
-  // de vistas por defecto de la aplicación
+  const [viewCount, setViewCount] = useState(4);
   const [images, setImages] = useState([
     'path/to/dicom1.png',
     'path/to/dicom2.png',
@@ -19,12 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <header style={{ padding: '10px', backgroundColor: '#333', color: '#fff' }}>
+      <div className="button-group">
         <button onClick={() => handleViewChange(1)}>1 View</button>
         <button onClick={() => handleViewChange(2)}>2 Views</button>
         <button onClick={() => handleViewChange(3)}>3 Views</button>
-        <button onClick={() => handleViewChange(4)}>4 views</button>
-      </header>
+        <button onClick={() => handleViewChange(4)}>4 Views</button>
+      </div>
       <GridView images={displayedImages} />
     </div>
   );

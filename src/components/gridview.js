@@ -1,17 +1,11 @@
 import React from 'react';
+import './GridView.css'; // Importa el archivo CSS
 
 const GridView = ({ images }) => {
-  const gridStyle = {
-    display: 'grid',
-    gridTemplateColumns: `repeat(${Math.min(images.length, 4)}, 1fr)`,
-    gap: '10px',
-    padding: '10px',
-  };
-
   return (
-    <div style={gridStyle}>
+    <div className="grid-container">
       {images.map((image, index) => (
-        <img key={index} src={image} alt={`DICOM ${index}`} style={{ width: '100%' }} />
+        <img key={index} src={image} alt={`DICOM ${index}`} className="grid-item" />
       ))}
     </div>
   );
