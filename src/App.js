@@ -4,6 +4,7 @@ import './App.css';
 
 // Importa las imágenes
 import defaultImage from './Assets/add-file.png';
+import MainMenu from './components/mainMenu';
 
 function App() {
   const [viewCount, setViewCount] = useState(4);
@@ -22,13 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="button-group">
-        <button onClick={() => handleViewChange(1)}>1 View</button>
-        <button onClick={() => handleViewChange(2)}>2 Views</button>
-        <button onClick={() => handleViewChange(3)}>3 Views</button>
-        <button onClick={() => handleViewChange(4)}>4 Views</button>
-      </div>
-      <GridView images={displayedImages} />
+      <MainMenu></MainMenu>
+
     </div>
   );
 }

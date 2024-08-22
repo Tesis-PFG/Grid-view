@@ -1,0 +1,42 @@
+.mainBox{
+    background-color: #5A639C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 100vh;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Alinea las imágenes en columna */
+    justify-content: center; /* Centra las imágenes verticalmente */
+    align-items: center; /* Centra las imágenes horizontalmente */
+    gap: 15px; /* Espacio entre las imágenes */
+}
+
+.menuImage {
+    cursor: pointer; /* Cambia el cursor cuando pasa sobre la imagen */
+    transition: transform 0.3s ease, border-radius 0.3s ease; /* Transiciones suaves */
+}
+
+.normal {
+    width: 50%; /* Tamaño pequeño para imágenes no seleccionadas */
+
+}
+
+.selected {
+    width: 60%; /* Tamaño grande para la imagen seleccionada */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    background-color: #E2BBE9; /* Color rosa de fondo */
+    padding: 8px; /* Espacio entre la imagen y el borde del círculo */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* Sombra opcional para darle un efecto de elevación */
+}
+
