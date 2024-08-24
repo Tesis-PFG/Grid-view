@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GridView from './components/gridview';
 import './App.css';
 
-// Importa las imágenes
+// Importa las imágenes por defecto
 import defaultImage from './Assets/add-file.png';
 
 function App() {

@@ -1,34 +1,18 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-function createWindow () {
-  const mainWindow = new BrowserWindow({
+function createWindow() {
+  const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      contextIsolation: true,
-      enableRemoteModule: false,
-      nodeIntegration: false
-    }
+      preload: path.join(__dirname, 'preload.js'),  // Carga el archivo preload.js
+      nodeIntegration: false,  // Esto debe ser false cuando uses contextBridge
+      contextIsolation: true,  // Asegura que el contexto esté aislado
+    },
   });
 
-  mainWindow.loadURL('http://localhost:3000'); 
-  Menu.setApplicationMenu(null);
+  win.loadURL('http://localhost:3000');  // O el path a tu build de React
 }
 
-app.whenReady().then(() => {
-  createWindow();
-
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
-    }
-  });
-});
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
+app.whenReady().then(createWindow);
