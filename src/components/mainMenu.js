@@ -11,29 +11,34 @@ import logoAñadirDicom_Morada from '../Assets/addDicom_purple.png'
 import logoAñadirDicom_Blanco from '../Assets/addDicom_white.png'
 
 
-const MainMenu = () => {
-    const [selectedOption, setSelectedOption] = useState(2); // Imagen 2 es la seleccionada por defecto
+const MainMenu = ({ onSelectOption }) => {
+    const [selectedImage, setSelectedImage] = useState(2); // Imagen 2 es la seleccionada por defecto
   
+    const handleClick = (option) => {
+      setSelectedImage(option);
+      onSelectOption(option);
+    };
+
     return (
       <div className="mainBox">
         <div className="imageContainer">
           <img
-            src={selectedOption === 1 ? logoBaseDatos_Morada : logoBaseDatos_Blanco}
+            src={selectedImage  === 1 ? logoBaseDatos_Morada : logoBaseDatos_Blanco}
             alt="Image 1"
-            className={`menuImage ${selectedOption === 1 ? 'selected' : 'normal'}`}
-            onClick={() => setSelectedOption(1)}
+            className={`menuImage ${selectedImage  === 1 ? 'selected' : 'normal'}`}
+            onClick={() => handleClick(1)}
           />
           <img
-            src={selectedOption === 2 ? logoVisualizacion_Morada : logoVisualizacion_Blanco}
+            src={selectedImage  === 2 ? logoVisualizacion_Morada : logoVisualizacion_Blanco}
             alt="Image 2"
-            className={`menuImage ${selectedOption === 2 ? 'selected' : 'normal'}`}
-            onClick={() => setSelectedOption(2)}
+            className={`menuImage ${selectedImage  === 2 ? 'selected' : 'normal'}`}
+            onClick={() => handleClick(2)}
           />
           <img
-            src={selectedOption === 3 ? logoAñadirDicom_Morada : logoAñadirDicom_Blanco}
+            src={selectedImage  === 3 ? logoAñadirDicom_Morada : logoAñadirDicom_Blanco}
             alt="Image 3"
-            className={`menuImage ${selectedOption === 3 ? 'selected' : 'normal'}`}
-            onClick={() => setSelectedOption(3)}
+            className={`menuImage ${selectedImage  === 3 ? 'selected' : 'normal'}`}
+            onClick={() => handleClick(3)}
           />
         </div>
       </div>

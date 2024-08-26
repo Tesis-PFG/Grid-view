@@ -4,6 +4,7 @@ Una vez tenidos ya los archivos desde git clone:
 - cd dicom-viewer
 - npm install electron electron-builder --save-dev
 - npm install electron concurrently wait-on --save-dev (instala las dependencias necesarias para poder correr electron y react de manera simultanea)
+- En dos consolas simultáneas: "npm run react-start" "npm run electron-start"
 
  
 Haciendo uso de concurrently y wait-on se añaden los scripts de start para la app de electron y de react

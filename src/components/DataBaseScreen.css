@@ -1,0 +1,51 @@
+.baseDBScreen{
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column; /* Orienta los elementos verticalmente */
+}
+
+  .caja_superior {
+    height: 12%; /* Caja superior ocupa el 12% de la altura */
+    width: 100%; /* Ocupa toda la anchura del contenedor */
+    background-color: white; /* Puedes ajustar este color según lo que necesites */
+
+    display: flex; /* Flexbox para alinear ícono y título */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente el contenedor completo */
+    position: relative; /* Posiciona elementos relativamente para usar absolute dentro */
+  }
+  
+  .caja_inferior {
+    height: 88%; /* Caja inferior ocupa el resto del 88% */
+    width: 100%; /* Ocupa toda la anchura del contenedor */
+    background-color: #d124d1; /* Puedes ajustar este color según lo que necesites */
+  }
+
+
+  
+  .contenedor_filtro {
+    position: absolute; /* Posición absoluta para ubicar el ícono a la izquierda */
+    left: 2%; /* Margen desde la izquierda */
+  }
+  
+  .icono_filtro {
+    width: 30px; /* Ajusta el tamaño del ícono según lo necesites */
+    height: auto;
+  }
+  
+  .contenedor_titulo {
+    flex: 1; /* Ocupa todo el espacio restante para centrar el título */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  
+  .titulo {
+    margin: 0; /* Remueve márgenes por defecto del h1 */
+    font-size: 1.5em; /* Ajusta el tamaño del título según lo necesites */
+    font-family: 'Roboto';
+    font-style: 'bold';
+  }
+  
